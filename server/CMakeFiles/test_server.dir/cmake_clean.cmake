@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "test.pb.cc"
+  "test.pb.h"
   "CMakeFiles/test_server.dir/main.cpp.o"
   "CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o"
   "CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o"
@@ -12,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o"
   "CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o"
   "CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o"
+  "CMakeFiles/test_server.dir/test.pb.cc.o"
   "test_server.pdb"
   "test_server"
 )

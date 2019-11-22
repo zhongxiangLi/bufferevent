@@ -474,6 +474,33 @@ src/LoginServerMgr.cpp.s:
 	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.s
 .PHONY : src/LoginServerMgr.cpp.s
 
+test.pb.o: test.pb.cc.o
+
+.PHONY : test.pb.o
+
+# target to build an object file
+test.pb.cc.o:
+	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/test.pb.cc.o
+.PHONY : test.pb.cc.o
+
+test.pb.i: test.pb.cc.i
+
+.PHONY : test.pb.i
+
+# target to preprocess a source file
+test.pb.cc.i:
+	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/test.pb.cc.i
+.PHONY : test.pb.cc.i
+
+test.pb.s: test.pb.cc.s
+
+.PHONY : test.pb.s
+
+# target to generate assembly for a file
+test.pb.cc.s:
+	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/test.pb.cc.s
+.PHONY : test.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -522,6 +549,9 @@ help:
 	@echo "... src/LoginServerMgr.o"
 	@echo "... src/LoginServerMgr.i"
 	@echo "... src/LoginServerMgr.s"
+	@echo "... test.pb.o"
+	@echo "... test.pb.i"
+	@echo "... test.pb.s"
 .PHONY : help
 
 

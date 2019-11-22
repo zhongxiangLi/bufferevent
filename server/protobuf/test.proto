@@ -1,0 +1,5 @@
+message sayHello{
+	required	string sayWhat = 1;
+	optional	int32	value  = 2;
+}
+
