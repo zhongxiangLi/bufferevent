@@ -78,15 +78,33 @@ bool EventSocket::Create(evutil_socket_t nfd)
 }
 void EventSocket::sOnRead(struct bufferevent* pBev,void *pData)
 {
-	gErrorMsg(" have read");
+	// 测试：简单把客户端发送过来的数据解析 输出然后发出去
+	/*
+		正常需要在这进行消息的解析操作
+	*/
+	gErrorMsg("read new msg");
+	// 从缓冲区读取到evbuffer中
+	struct evbuffer *buf = evbuffer_new();
+	bufferevent_read_buffer(pBev,buf);
+	int len = evbuffer_get_length(buf);
+
+	char  data[1024];
+	memset(data,0,sizeof(data));
+	evbuffer_remove(buf,data,len);
+	gDebugMsg("read msg len is "<<len<<" data is "<<data);	
+	evbuffer_free(buf);
+	
+	bufferevent_write(pBev,(void*)data,len);
+	
 }
 void EventSocket::sOnWrite(struct bufferevent* pBev,void *pData)
 {
-	gErrorMsg(" have Write");
+	//此函数会在发送之后 回调到，不用写任何逻辑
+	//gErrorMsg(" have Write");
 }
 void EventSocket::sOnEvent(struct bufferevent* pBev,short events,void *pData)
 {
-	gErrorMsg(" have Write");
+	gErrorMsg(" Event have ");
 }
 void EventSocket::onTickCB(evutil_socket_t fd ,short event,void *pData)
 {
