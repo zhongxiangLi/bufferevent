@@ -1,0 +1,3 @@
+/home/package/lzx/test/reactor/server/CMakeFiles/edit_cache.dir
+/home/package/lzx/test/reactor/server/CMakeFiles/rebuild_cache.dir
+/home/package/lzx/test/reactor/server/CMakeFiles/test_server.dir

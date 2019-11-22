@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<open_dt>2019-08-16 00:00:00</open_dt>
+	<proxy_id>1</proxy_id>
+	<server_id>1</server_id>
+	<server_name>S1</server_name>
+	<server_pwd>123456</server_pwd>
+	<server_ip>127.0.0.1</server_ip>
+	<server_port>6789</server_port>
+</root>

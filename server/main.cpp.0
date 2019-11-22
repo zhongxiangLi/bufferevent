@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <assert.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <arpa/inet.h>
+#include <string>
+
+#include "common.h"
+#include "global.h"
+
+#include "TcpSocketServerHandler.h"
+#include "RequestEventHandler.h"
+#include "LogServer.h"
+
+#include "tinyxml2.h"
+
+#include "EventMain.h"
+using namespace tinyxml2;
+
+class LoginServer :public EventMain
+{
+	public:
+		LoginServer(){}
+		~LoginServer(){}
+		
+		virtual void OnRegister()
+		{
+			
+		}
+	
+};
+
+void printHelloworld(client_data *data)
+{
+	fprintf(stderr,"timertask: hello world from timertask\n");
+}
+
+int main(int argc,char ** argv)
+{
+	
+	//init  log server
+	if(!g_LogSrv.init("config/log4z.cfg"))
+    {   
+         printf("g_logsrc init fail!!!!\n");
+		return 0;
+     }
+
+	//load xml 
+	XMLDocument xmlDoc;
+	XMLError eResult = xmlDoc.LoadFile("config/public_config.xml");
+
+	if(eResult != XML_SUCCESS)
+	{
+		gErrorStream("load config xml fail ");
+		return 0;
+	}
+	XMLElement *pRoot = xmlDoc.RootElement();
+	std::string srv_ip;
+	configcommon::GetDocumentValue(pRoot,"server_ip",srv_ip);
+	unsigned short srv_port ;
+	configcommon::GetDocumentValue(pRoot,"server_port",srv_port);
+	
+	// init socket server listen 
+	TcpSocketServerHandler  server(srv_ip.c_str(),srv_port);
+
+	if(!server.start())
+	{
+		fprintf(stderr,"start server failed");
+		return -1;
+	}
+	
+
+	gDebugStream("server start ip is "<<srv_ip.c_str()<<"port is "<<srv_port);
+
+	//
+	heap_timer* printtask = new heap_timer(5);
+	printtask->cb_func = printHelloworld;
+
+
+	gDebugStream("register a task whick will be run is five second");
+	g_reactor.RegisterTimerTask(printtask);
+	
+	
+
+	while(1)
+	{
+		g_reactor.RegisterHandler(&server,reactor::kReadEvent);
+		g_reactor.HandleEvents();
+
+	}
+
+	g_LogSrv.fini();
+	return 0;
+}

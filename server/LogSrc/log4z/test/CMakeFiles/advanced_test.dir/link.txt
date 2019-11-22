@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/advanced_test.dir/advanced_test.cpp.o  -o bin/advanced_test  -L/home/package/lzx/test/reactor/LogSrc/log4z/lib -rdynamic ../lib/liblog4z.a -lpthread -Wl,-rpath,/home/package/lzx/test/reactor/LogSrc/log4z/lib 
