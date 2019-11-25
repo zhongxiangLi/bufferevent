@@ -1,0 +1,3 @@
+/home/package/lzx/test/reactor/server/LoginServer/CMakeFiles/edit_cache.dir
+/home/package/lzx/test/reactor/server/LoginServer/CMakeFiles/rebuild_cache.dir
+/home/package/lzx/test/reactor/server/LoginServer/CMakeFiles/loginserver.dir

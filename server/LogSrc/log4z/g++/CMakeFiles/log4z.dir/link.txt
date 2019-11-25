@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblog4z.a  CMakeFiles/log4z.dir/home/package/lzx/test/reactor/LogSrc/log4z/log4z.cpp.o
-/usr/bin/ranlib liblog4z.a

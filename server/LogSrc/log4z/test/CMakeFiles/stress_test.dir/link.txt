@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/stress_test.dir/stress_test.cpp.o  -o bin/stress_test  -L/home/package/lzx/test/reactor/LogSrc/log4z/lib -rdynamic ../lib/liblog4z.a -lpthread -Wl,-rpath,/home/package/lzx/test/reactor/LogSrc/log4z/lib 

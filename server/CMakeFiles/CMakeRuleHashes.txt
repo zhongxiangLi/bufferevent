@@ -1,2 +1,2 @@
 # Hashes of file build rules.
-b9e07d166e326ab1c5eb8a241c1c7d5a test.pb.cc
+ac02a0fa5c48f3555bdcf5f5cd200f78 LoginServer/test.pb.cc

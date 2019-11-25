@@ -1,3 +1,8 @@
 /home/package/lzx/test/reactor/server/CMakeFiles/edit_cache.dir
 /home/package/lzx/test/reactor/server/CMakeFiles/rebuild_cache.dir
-/home/package/lzx/test/reactor/server/CMakeFiles/test_server.dir
+/home/package/lzx/test/reactor/server/net/CMakeFiles/edit_cache.dir
+/home/package/lzx/test/reactor/server/net/CMakeFiles/rebuild_cache.dir
+/home/package/lzx/test/reactor/server/net/CMakeFiles/net_static.dir
+/home/package/lzx/test/reactor/server/LoginServer/CMakeFiles/edit_cache.dir
+/home/package/lzx/test/reactor/server/LoginServer/CMakeFiles/rebuild_cache.dir
+/home/package/lzx/test/reactor/server/LoginServer/CMakeFiles/loginserver.dir

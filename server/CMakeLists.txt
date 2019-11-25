@@ -1,53 +1,5 @@
-project(SERVE_Reactor)
+PROJECT(GAME)
+
 cmake_minimum_required(VERSION 3.5)
-
-
-find_package(Protobuf REQUIRED)
-if(PROTOBUF_FOUND)
-    message(STATUS "protobuf library found")
-else()
-    message(FATAL_ERROR "protobuf library is needed but cant be found")
-endif()
-
-set(PROTO_FILES protobuf/test.proto)
-
-PROTOBUF_GENERATE_CPP(PROTO_SRCS PROTO_HDRS ${PROTO_FILES})
-
-set(cmake_build_type denug)	
-
-
-set(executable_output_path ${CMAKE_CURRENT_SOURCE_DIR}/bin)
-
-set(library_output_path ${CMAKE_CURRENT_SOURCE_DIR}/lib)
-
-include_directories(
-${PROTOBUF_INCLUDE_DIRS}
-${CMAKE_CURRENT_SOURCE_DIR}
-${CMAKE_CURRENT_BINARY_DIR}
-${CMAKE_CURRENT_SOURCE_DIR}/
-${CMAKE_CURRENT_SOURCE_DIR}/include
-${CMAKE_CURRENT_SOURCE_DIR}/LogSrc
-${CMAKE_CURRENT_SOURCE_DIR}/libutils
-${CMAKE_CURRENT_SOURCE_DIR}/net
-${CMAKE_CURRENT_SOURCE_DIR}/src
-)
-
-message("PROTO_SRCS = ${PROTO_SRCS}")
-message("PROTO_HDRS = ${PROTO_HDRS}")
-
-set(CMAKE_C_COMPILER "g++")
-set(CMAKE_CXX_FLAGS "-g  -ffunction-sections -O0 -D_GLIBCXX_USE_CXX11_ABI=0 ")
-aux_source_directory(./ SRC_LIST)
-aux_source_directory(include SRC_LIST)
-aux_source_directory(LogSrc SRC_LIST)
-aux_source_directory(libutils SRC_LIST)
-aux_source_directory(net SRC_LIST)
-aux_source_directory(src SRC_LIST)
-add_definitions(-g -Wall )
-
-
-
-add_executable(test_server ${SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS})
-target_link_libraries(test_server pthread event protobuf ${PROTOBUF_LIBRARIES})
-
-set(executable_output_path ./bin/)
+ADD_SUBDIRECTORY(net)
+ADD_SUBDIRECTORY(LoginServer)

@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/fast_test.dir/fast_test.cpp.o  -o bin/fast_test  -L/home/package/lzx/test/reactor/LogSrc/log4z/lib -rdynamic ../lib/liblog4z.a -lpthread -Wl,-rpath,/home/package/lzx/test/reactor/LogSrc/log4z/lib 

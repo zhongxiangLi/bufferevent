@@ -60,39 +60,112 @@ CMAKE_SOURCE_DIR = /home/package/lzx/test/reactor/server
 CMAKE_BINARY_DIR = /home/package/lzx/test/reactor/server
 
 #=============================================================================
-# Target rules for target CMakeFiles/test_server.dir
+# Directory level rules for directory net
+
+# Convenience name for "all" pass in the directory.
+net/all: net/CMakeFiles/net_static.dir/all
+
+.PHONY : net/all
+
+# Convenience name for "clean" pass in the directory.
+net/clean: net/CMakeFiles/net_static.dir/clean
+
+.PHONY : net/clean
+
+# Convenience name for "preinstall" pass in the directory.
+net/preinstall:
+
+.PHONY : net/preinstall
+
+#=============================================================================
+# Target rules for target net/CMakeFiles/net_static.dir
 
 # All Build rule for target.
-CMakeFiles/test_server.dir/all:
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/depend
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target test_server"
-.PHONY : CMakeFiles/test_server.dir/all
+net/CMakeFiles/net_static.dir/all:
+	$(MAKE) -f net/CMakeFiles/net_static.dir/build.make net/CMakeFiles/net_static.dir/depend
+	$(MAKE) -f net/CMakeFiles/net_static.dir/build.make net/CMakeFiles/net_static.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15,16,17,18 "Built target net_static"
+.PHONY : net/CMakeFiles/net_static.dir/all
 
 # Include target in all.
-all: CMakeFiles/test_server.dir/all
+all: net/CMakeFiles/net_static.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/package/lzx/test/reactor/server/CMakeFiles 16
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_server.dir/all
+net/CMakeFiles/net_static.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/package/lzx/test/reactor/server/CMakeFiles 12
+	$(MAKE) -f CMakeFiles/Makefile2 net/CMakeFiles/net_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/package/lzx/test/reactor/server/CMakeFiles 0
-.PHONY : CMakeFiles/test_server.dir/rule
+.PHONY : net/CMakeFiles/net_static.dir/rule
 
 # Convenience name for target.
-test_server: CMakeFiles/test_server.dir/rule
+net_static: net/CMakeFiles/net_static.dir/rule
 
-.PHONY : test_server
-
-# clean rule for target.
-CMakeFiles/test_server.dir/clean:
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/clean
-.PHONY : CMakeFiles/test_server.dir/clean
+.PHONY : net_static
 
 # clean rule for target.
-clean: CMakeFiles/test_server.dir/clean
+net/CMakeFiles/net_static.dir/clean:
+	$(MAKE) -f net/CMakeFiles/net_static.dir/build.make net/CMakeFiles/net_static.dir/clean
+.PHONY : net/CMakeFiles/net_static.dir/clean
+
+# clean rule for target.
+clean: net/CMakeFiles/net_static.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory LoginServer
+
+# Convenience name for "all" pass in the directory.
+LoginServer/all: LoginServer/CMakeFiles/loginserver.dir/all
+
+.PHONY : LoginServer/all
+
+# Convenience name for "clean" pass in the directory.
+LoginServer/clean: LoginServer/CMakeFiles/loginserver.dir/clean
+
+.PHONY : LoginServer/clean
+
+# Convenience name for "preinstall" pass in the directory.
+LoginServer/preinstall:
+
+.PHONY : LoginServer/preinstall
+
+#=============================================================================
+# Target rules for target LoginServer/CMakeFiles/loginserver.dir
+
+# All Build rule for target.
+LoginServer/CMakeFiles/loginserver.dir/all: net/CMakeFiles/net_static.dir/all
+	$(MAKE) -f LoginServer/CMakeFiles/loginserver.dir/build.make LoginServer/CMakeFiles/loginserver.dir/depend
+	$(MAKE) -f LoginServer/CMakeFiles/loginserver.dir/build.make LoginServer/CMakeFiles/loginserver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target loginserver"
+.PHONY : LoginServer/CMakeFiles/loginserver.dir/all
+
+# Include target in all.
+all: LoginServer/CMakeFiles/loginserver.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+LoginServer/CMakeFiles/loginserver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/package/lzx/test/reactor/server/CMakeFiles 18
+	$(MAKE) -f CMakeFiles/Makefile2 LoginServer/CMakeFiles/loginserver.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/package/lzx/test/reactor/server/CMakeFiles 0
+.PHONY : LoginServer/CMakeFiles/loginserver.dir/rule
+
+# Convenience name for target.
+loginserver: LoginServer/CMakeFiles/loginserver.dir/rule
+
+.PHONY : loginserver
+
+# clean rule for target.
+LoginServer/CMakeFiles/loginserver.dir/clean:
+	$(MAKE) -f LoginServer/CMakeFiles/loginserver.dir/build.make LoginServer/CMakeFiles/loginserver.dir/clean
+.PHONY : LoginServer/CMakeFiles/loginserver.dir/clean
+
+# clean rule for target.
+clean: LoginServer/CMakeFiles/loginserver.dir/clean
 
 .PHONY : clean
 

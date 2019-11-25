@@ -1,0 +1,2 @@
+/home/package/lzx/test/reactor/server/protobuf/CMakeFiles/edit_cache.dir
+/home/package/lzx/test/reactor/server/protobuf/CMakeFiles/rebuild_cache.dir

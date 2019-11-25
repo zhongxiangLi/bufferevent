@@ -65,57 +65,33 @@ test.pb.cc: /usr/local/bin/protoc
 test.pb.h: test.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate test.pb.h
 
-CMakeFiles/test_server.dir/main.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_server.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/main.cpp.o -c /home/package/lzx/test/reactor/server/main.cpp
+CMakeFiles/test_server.dir/test.pb.cc.o: CMakeFiles/test_server.dir/flags.make
+CMakeFiles/test_server.dir/test.pb.cc.o: test.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_server.dir/test.pb.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/test.pb.cc.o -c /home/package/lzx/test/reactor/server/test.pb.cc
 
-CMakeFiles/test_server.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/main.cpp > CMakeFiles/test_server.dir/main.cpp.i
+CMakeFiles/test_server.dir/test.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/test.pb.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/test.pb.cc > CMakeFiles/test_server.dir/test.pb.cc.i
 
-CMakeFiles/test_server.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/main.cpp -o CMakeFiles/test_server.dir/main.cpp.s
+CMakeFiles/test_server.dir/test.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/test.pb.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/test.pb.cc -o CMakeFiles/test_server.dir/test.pb.cc.s
 
-CMakeFiles/test_server.dir/main.cpp.o.requires:
+CMakeFiles/test_server.dir/test.pb.cc.o.requires:
 
-.PHONY : CMakeFiles/test_server.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/test_server.dir/test.pb.cc.o.requires
 
-CMakeFiles/test_server.dir/main.cpp.o.provides: CMakeFiles/test_server.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/main.cpp.o.provides
+CMakeFiles/test_server.dir/test.pb.cc.o.provides: CMakeFiles/test_server.dir/test.pb.cc.o.requires
+	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/test.pb.cc.o.provides.build
+.PHONY : CMakeFiles/test_server.dir/test.pb.cc.o.provides
 
-CMakeFiles/test_server.dir/main.cpp.o.provides.build: CMakeFiles/test_server.dir/main.cpp.o
-
-
-CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o: LogSrc/LogServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o -c /home/package/lzx/test/reactor/server/LogSrc/LogServer.cpp
-
-CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/LogSrc/LogServer.cpp > CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.i
-
-CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/LogSrc/LogServer.cpp -o CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.s
-
-CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.requires
-
-CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.provides: CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.provides
-
-CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.provides.build: CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o
+CMakeFiles/test_server.dir/test.pb.cc.o.provides.build: CMakeFiles/test_server.dir/test.pb.cc.o
 
 
 CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o: CMakeFiles/test_server.dir/flags.make
 CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o: libutils/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o -c /home/package/lzx/test/reactor/server/libutils/tinyxml2.cpp
 
 CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.i: cmake_force
@@ -135,6 +111,30 @@ CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o.provides: CMakeFiles/test_ser
 .PHONY : CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o.provides
 
 CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o.provides.build: CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o
+
+
+CMakeFiles/test_server.dir/libutils/LogServer.cpp.o: CMakeFiles/test_server.dir/flags.make
+CMakeFiles/test_server.dir/libutils/LogServer.cpp.o: libutils/LogServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test_server.dir/libutils/LogServer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/libutils/LogServer.cpp.o -c /home/package/lzx/test/reactor/server/libutils/LogServer.cpp
+
+CMakeFiles/test_server.dir/libutils/LogServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/libutils/LogServer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/libutils/LogServer.cpp > CMakeFiles/test_server.dir/libutils/LogServer.cpp.i
+
+CMakeFiles/test_server.dir/libutils/LogServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/libutils/LogServer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/libutils/LogServer.cpp -o CMakeFiles/test_server.dir/libutils/LogServer.cpp.s
+
+CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.requires:
+
+.PHONY : CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.requires
+
+CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.provides: CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.provides.build
+.PHONY : CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.provides
+
+CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.provides.build: CMakeFiles/test_server.dir/libutils/LogServer.cpp.o
 
 
 CMakeFiles/test_server.dir/libutils/global.cpp.o: CMakeFiles/test_server.dir/flags.make
@@ -185,281 +185,38 @@ CMakeFiles/test_server.dir/libutils/log4z.cpp.o.provides: CMakeFiles/test_server
 CMakeFiles/test_server.dir/libutils/log4z.cpp.o.provides.build: CMakeFiles/test_server.dir/libutils/log4z.cpp.o
 
 
-CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o: net/EventTcpServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o -c /home/package/lzx/test/reactor/server/net/EventTcpServer.cpp
-
-CMakeFiles/test_server.dir/net/EventTcpServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/net/EventTcpServer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/net/EventTcpServer.cpp > CMakeFiles/test_server.dir/net/EventTcpServer.cpp.i
-
-CMakeFiles/test_server.dir/net/EventTcpServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/net/EventTcpServer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/net/EventTcpServer.cpp -o CMakeFiles/test_server.dir/net/EventTcpServer.cpp.s
-
-CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.requires
-
-CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.provides: CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.provides
-
-CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.provides.build: CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o
-
-
-CMakeFiles/test_server.dir/net/LoginSrv.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/net/LoginSrv.cpp.o: net/LoginSrv.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test_server.dir/net/LoginSrv.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/net/LoginSrv.cpp.o -c /home/package/lzx/test/reactor/server/net/LoginSrv.cpp
-
-CMakeFiles/test_server.dir/net/LoginSrv.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/net/LoginSrv.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/net/LoginSrv.cpp > CMakeFiles/test_server.dir/net/LoginSrv.cpp.i
-
-CMakeFiles/test_server.dir/net/LoginSrv.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/net/LoginSrv.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/net/LoginSrv.cpp -o CMakeFiles/test_server.dir/net/LoginSrv.cpp.s
-
-CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.requires
-
-CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.provides: CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.provides
-
-CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.provides.build: CMakeFiles/test_server.dir/net/LoginSrv.cpp.o
-
-
-CMakeFiles/test_server.dir/net/EventSocket.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/net/EventSocket.cpp.o: net/EventSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test_server.dir/net/EventSocket.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/net/EventSocket.cpp.o -c /home/package/lzx/test/reactor/server/net/EventSocket.cpp
-
-CMakeFiles/test_server.dir/net/EventSocket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/net/EventSocket.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/net/EventSocket.cpp > CMakeFiles/test_server.dir/net/EventSocket.cpp.i
-
-CMakeFiles/test_server.dir/net/EventSocket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/net/EventSocket.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/net/EventSocket.cpp -o CMakeFiles/test_server.dir/net/EventSocket.cpp.s
-
-CMakeFiles/test_server.dir/net/EventSocket.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/net/EventSocket.cpp.o.requires
-
-CMakeFiles/test_server.dir/net/EventSocket.cpp.o.provides: CMakeFiles/test_server.dir/net/EventSocket.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/net/EventSocket.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/net/EventSocket.cpp.o.provides
-
-CMakeFiles/test_server.dir/net/EventSocket.cpp.o.provides.build: CMakeFiles/test_server.dir/net/EventSocket.cpp.o
-
-
-CMakeFiles/test_server.dir/net/EventProcessor.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/net/EventProcessor.cpp.o: net/EventProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test_server.dir/net/EventProcessor.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/net/EventProcessor.cpp.o -c /home/package/lzx/test/reactor/server/net/EventProcessor.cpp
-
-CMakeFiles/test_server.dir/net/EventProcessor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/net/EventProcessor.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/net/EventProcessor.cpp > CMakeFiles/test_server.dir/net/EventProcessor.cpp.i
-
-CMakeFiles/test_server.dir/net/EventProcessor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/net/EventProcessor.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/net/EventProcessor.cpp -o CMakeFiles/test_server.dir/net/EventProcessor.cpp.s
-
-CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.requires
-
-CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.provides: CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.provides
-
-CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.provides.build: CMakeFiles/test_server.dir/net/EventProcessor.cpp.o
-
-
-CMakeFiles/test_server.dir/net/EventMain.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/net/EventMain.cpp.o: net/EventMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test_server.dir/net/EventMain.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/net/EventMain.cpp.o -c /home/package/lzx/test/reactor/server/net/EventMain.cpp
-
-CMakeFiles/test_server.dir/net/EventMain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/net/EventMain.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/net/EventMain.cpp > CMakeFiles/test_server.dir/net/EventMain.cpp.i
-
-CMakeFiles/test_server.dir/net/EventMain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/net/EventMain.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/net/EventMain.cpp -o CMakeFiles/test_server.dir/net/EventMain.cpp.s
-
-CMakeFiles/test_server.dir/net/EventMain.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/net/EventMain.cpp.o.requires
-
-CMakeFiles/test_server.dir/net/EventMain.cpp.o.provides: CMakeFiles/test_server.dir/net/EventMain.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/net/EventMain.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/net/EventMain.cpp.o.provides
-
-CMakeFiles/test_server.dir/net/EventMain.cpp.o.provides.build: CMakeFiles/test_server.dir/net/EventMain.cpp.o
-
-
-CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o: net/EventTcpLink.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o -c /home/package/lzx/test/reactor/server/net/EventTcpLink.cpp
-
-CMakeFiles/test_server.dir/net/EventTcpLink.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/net/EventTcpLink.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/net/EventTcpLink.cpp > CMakeFiles/test_server.dir/net/EventTcpLink.cpp.i
-
-CMakeFiles/test_server.dir/net/EventTcpLink.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/net/EventTcpLink.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/net/EventTcpLink.cpp -o CMakeFiles/test_server.dir/net/EventTcpLink.cpp.s
-
-CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.requires
-
-CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.provides: CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.provides
-
-CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.provides.build: CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o
-
-
-CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o: src/LoginServerMgr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o -c /home/package/lzx/test/reactor/server/src/LoginServerMgr.cpp
-
-CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/src/LoginServerMgr.cpp > CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.i
-
-CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/src/LoginServerMgr.cpp -o CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.s
-
-CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.requires
-
-CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.provides: CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.provides
-
-CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.provides.build: CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o
-
-
-CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o: src/LoginNetServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o -c /home/package/lzx/test/reactor/server/src/LoginNetServer.cpp
-
-CMakeFiles/test_server.dir/src/LoginNetServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/src/LoginNetServer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/src/LoginNetServer.cpp > CMakeFiles/test_server.dir/src/LoginNetServer.cpp.i
-
-CMakeFiles/test_server.dir/src/LoginNetServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/src/LoginNetServer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/src/LoginNetServer.cpp -o CMakeFiles/test_server.dir/src/LoginNetServer.cpp.s
-
-CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.requires
-
-CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.provides: CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.provides
-
-CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.provides.build: CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o
-
-
-CMakeFiles/test_server.dir/test.pb.cc.o: CMakeFiles/test_server.dir/flags.make
-CMakeFiles/test_server.dir/test.pb.cc.o: test.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/test_server.dir/test.pb.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test_server.dir/test.pb.cc.o -c /home/package/lzx/test/reactor/server/test.pb.cc
-
-CMakeFiles/test_server.dir/test.pb.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_server.dir/test.pb.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/package/lzx/test/reactor/server/test.pb.cc > CMakeFiles/test_server.dir/test.pb.cc.i
-
-CMakeFiles/test_server.dir/test.pb.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_server.dir/test.pb.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/package/lzx/test/reactor/server/test.pb.cc -o CMakeFiles/test_server.dir/test.pb.cc.s
-
-CMakeFiles/test_server.dir/test.pb.cc.o.requires:
-
-.PHONY : CMakeFiles/test_server.dir/test.pb.cc.o.requires
-
-CMakeFiles/test_server.dir/test.pb.cc.o.provides: CMakeFiles/test_server.dir/test.pb.cc.o.requires
-	$(MAKE) -f CMakeFiles/test_server.dir/build.make CMakeFiles/test_server.dir/test.pb.cc.o.provides.build
-.PHONY : CMakeFiles/test_server.dir/test.pb.cc.o.provides
-
-CMakeFiles/test_server.dir/test.pb.cc.o.provides.build: CMakeFiles/test_server.dir/test.pb.cc.o
-
-
 # Object files for target test_server
 test_server_OBJECTS = \
-"CMakeFiles/test_server.dir/main.cpp.o" \
-"CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o" \
+"CMakeFiles/test_server.dir/test.pb.cc.o" \
 "CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o" \
+"CMakeFiles/test_server.dir/libutils/LogServer.cpp.o" \
 "CMakeFiles/test_server.dir/libutils/global.cpp.o" \
-"CMakeFiles/test_server.dir/libutils/log4z.cpp.o" \
-"CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o" \
-"CMakeFiles/test_server.dir/net/LoginSrv.cpp.o" \
-"CMakeFiles/test_server.dir/net/EventSocket.cpp.o" \
-"CMakeFiles/test_server.dir/net/EventProcessor.cpp.o" \
-"CMakeFiles/test_server.dir/net/EventMain.cpp.o" \
-"CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o" \
-"CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o" \
-"CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o" \
-"CMakeFiles/test_server.dir/test.pb.cc.o"
+"CMakeFiles/test_server.dir/libutils/log4z.cpp.o"
 
 # External object files for target test_server
 test_server_EXTERNAL_OBJECTS =
 
-test_server: CMakeFiles/test_server.dir/main.cpp.o
-test_server: CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o
-test_server: CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o
-test_server: CMakeFiles/test_server.dir/libutils/global.cpp.o
-test_server: CMakeFiles/test_server.dir/libutils/log4z.cpp.o
-test_server: CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o
-test_server: CMakeFiles/test_server.dir/net/LoginSrv.cpp.o
-test_server: CMakeFiles/test_server.dir/net/EventSocket.cpp.o
-test_server: CMakeFiles/test_server.dir/net/EventProcessor.cpp.o
-test_server: CMakeFiles/test_server.dir/net/EventMain.cpp.o
-test_server: CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o
-test_server: CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o
-test_server: CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o
-test_server: CMakeFiles/test_server.dir/test.pb.cc.o
-test_server: CMakeFiles/test_server.dir/build.make
-test_server: /usr/local/lib/libprotobuf.so
-test_server: CMakeFiles/test_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable test_server"
+bin/test_server: CMakeFiles/test_server.dir/test.pb.cc.o
+bin/test_server: CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o
+bin/test_server: CMakeFiles/test_server.dir/libutils/LogServer.cpp.o
+bin/test_server: CMakeFiles/test_server.dir/libutils/global.cpp.o
+bin/test_server: CMakeFiles/test_server.dir/libutils/log4z.cpp.o
+bin/test_server: CMakeFiles/test_server.dir/build.make
+bin/test_server: /usr/local/lib/libprotobuf.so
+bin/test_server: CMakeFiles/test_server.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/package/lzx/test/reactor/server/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable bin/test_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/test_server.dir/build: test_server
+CMakeFiles/test_server.dir/build: bin/test_server
 
 .PHONY : CMakeFiles/test_server.dir/build
 
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/main.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/LogSrc/LogServer.cpp.o.requires
+CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/test.pb.cc.o.requires
 CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/libutils/tinyxml2.cpp.o.requires
+CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/libutils/LogServer.cpp.o.requires
 CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/libutils/global.cpp.o.requires
 CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/libutils/log4z.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/net/EventTcpServer.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/net/LoginSrv.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/net/EventSocket.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/net/EventProcessor.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/net/EventMain.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/net/EventTcpLink.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/src/LoginServerMgr.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/src/LoginNetServer.cpp.o.requires
-CMakeFiles/test_server.dir/requires: CMakeFiles/test_server.dir/test.pb.cc.o.requires
 
 .PHONY : CMakeFiles/test_server.dir/requires
 

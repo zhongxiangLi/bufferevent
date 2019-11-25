@@ -1,0 +1,3 @@
+/home/package/lzx/test/reactor/server/net/CMakeFiles/edit_cache.dir
+/home/package/lzx/test/reactor/server/net/CMakeFiles/rebuild_cache.dir
+/home/package/lzx/test/reactor/server/net/CMakeFiles/net_static.dir
