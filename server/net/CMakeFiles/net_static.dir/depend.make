@@ -22,11 +22,16 @@ net/CMakeFiles/net_static.dir/src/EventMain.cpp.o: net/../libutils/log4z.h
 net/CMakeFiles/net_static.dir/src/EventMain.cpp.o: net/../libutils/singleton.h
 net/CMakeFiles/net_static.dir/src/EventMain.cpp.o: net/include/EventMain.h
 net/CMakeFiles/net_static.dir/src/EventMain.cpp.o: net/include/EventNet.h
+net/CMakeFiles/net_static.dir/src/EventMain.cpp.o: net/include/EventPacket.h
 net/CMakeFiles/net_static.dir/src/EventMain.cpp.o: net/include/EventSocket.h
 
 net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/src/EventPacket.cpp
+net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/../libutils/LogServer.h
+net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/../libutils/log4z.h
+net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/../libutils/singleton.h
 net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/include/CS_NET_MSG_DEF.h
 net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/include/CS_NET_MSG_STRUCT.h
+net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/include/EventNet.h
 net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/include/EventPacket.h
 net/CMakeFiles/net_static.dir/src/EventPacket.cpp.o: net/include/NET_MSG_DEF.h
 
@@ -38,6 +43,7 @@ net/CMakeFiles/net_static.dir/src/EventSocket.cpp.o: net/../libutils/log4z.h
 net/CMakeFiles/net_static.dir/src/EventSocket.cpp.o: net/../libutils/singleton.h
 net/CMakeFiles/net_static.dir/src/EventSocket.cpp.o: net/include/EventMain.h
 net/CMakeFiles/net_static.dir/src/EventSocket.cpp.o: net/include/EventNet.h
+net/CMakeFiles/net_static.dir/src/EventSocket.cpp.o: net/include/EventPacket.h
 net/CMakeFiles/net_static.dir/src/EventSocket.cpp.o: net/include/EventSocket.h
 
 net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/src/EventTcpLink.cpp
@@ -45,6 +51,7 @@ net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/../libutils/LogServer.
 net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/../libutils/log4z.h
 net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/../libutils/singleton.h
 net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/include/EventNet.h
+net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/include/EventPacket.h
 net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/include/EventSocket.h
 net/CMakeFiles/net_static.dir/src/EventTcpLink.cpp.o: net/include/EventTcpLink.h
 
@@ -54,6 +61,7 @@ net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/../libutils/log4z.h
 net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/../libutils/singleton.h
 net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/include/EventMain.h
 net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/include/EventNet.h
+net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/include/EventPacket.h
 net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/include/EventSocket.h
 net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/include/EventTcpLink.h
 net/CMakeFiles/net_static.dir/src/EventTcpServer.cpp.o: net/include/EventTcpServer.h

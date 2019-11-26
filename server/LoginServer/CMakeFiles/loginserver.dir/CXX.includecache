@@ -248,9 +248,17 @@ event2/thread.h
 LogServer.h
 LoginServer/../net/include/LogServer.h
 
+LoginServer/../net/include/EventPacket.h
+string.h
+-
+stdlib.h
+-
+
 LoginServer/../net/include/EventSocket.h
 EventNet.h
 LoginServer/../net/include/EventNet.h
+EventPacket.h
+LoginServer/../net/include/EventPacket.h
 
 LoginServer/../net/include/EventTcpLink.h
 EventNet.h

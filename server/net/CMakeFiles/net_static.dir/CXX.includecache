@@ -173,6 +173,8 @@ EventSocket.h
 /home/package/lzx/test/reactor/server/net/src/EventSocket.h
 LogServer.h
 /home/package/lzx/test/reactor/server/net/src/LogServer.h
+EventPacket.h
+/home/package/lzx/test/reactor/server/net/src/EventPacket.h
 
 /home/package/lzx/test/reactor/server/net/src/EventPacket.cpp
 EventPacket.h
@@ -183,6 +185,8 @@ NET_MSG_DEF.h
 /home/package/lzx/test/reactor/server/net/src/NET_MSG_DEF.h
 CS_NET_MSG_STRUCT.h
 /home/package/lzx/test/reactor/server/net/src/CS_NET_MSG_STRUCT.h
+EventNet.h
+/home/package/lzx/test/reactor/server/net/src/EventNet.h
 CS_NET_MSG_DEF.h
 /home/package/lzx/test/reactor/server/net/src/CS_NET_MSG_DEF.h
 
@@ -311,6 +315,8 @@ stdlib.h
 net/include/EventSocket.h
 EventNet.h
 net/include/EventNet.h
+EventPacket.h
+net/include/EventPacket.h
 
 net/include/EventTcpLink.h
 EventNet.h

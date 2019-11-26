@@ -1,6 +1,8 @@
 #include "EventMain.h"
 #include "EventSocket.h"
 #include "LogServer.h"
+#include "EventPacket.h"
+
 struct event_base *g_pEvMainBase =  NULL;
 
 EventMain *g_pEventMain = NULL;
@@ -18,6 +20,7 @@ EventMain::~EventMain(){
 }
 void EventMain::Run(int argc,char *argv[],int nFPS )
 {
+	EventPacket::sInit();
 	//注册信号事件
 	sInitSignal();
 	//注册 系统module

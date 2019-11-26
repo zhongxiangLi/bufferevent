@@ -7,6 +7,7 @@ LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../
 LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../libutils/singleton.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../net/include/EventMain.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../net/include/EventNet.h
+LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../net/include/EventPacket.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../net/include/EventSocket.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../net/include/EventTcpLink.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o: LoginServer/../net/include/EventTcpServer.h
@@ -18,6 +19,7 @@ LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../
 LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../libutils/singleton.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../net/include/EventMain.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../net/include/EventNet.h
+LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../net/include/EventPacket.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../net/include/EventSocket.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../net/include/EventTcpLink.h
 LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o: LoginServer/../net/include/EventTcpServer.h
@@ -33,6 +35,7 @@ LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../libutils/s
 LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../libutils/tinyxml2.h
 LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../net/include/EventMain.h
 LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../net/include/EventNet.h
+LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../net/include/EventPacket.h
 LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../net/include/EventSocket.h
 LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../net/include/EventTcpLink.h
 LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o: LoginServer/../net/include/EventTcpServer.h

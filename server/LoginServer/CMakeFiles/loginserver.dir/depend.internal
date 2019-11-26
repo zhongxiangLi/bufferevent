@@ -8,6 +8,7 @@ LoginServer/CMakeFiles/loginserver.dir/src/LoginNetServer.cpp.o
  LoginServer/../libutils/singleton.h
  LoginServer/../net/include/EventMain.h
  LoginServer/../net/include/EventNet.h
+ LoginServer/../net/include/EventPacket.h
  LoginServer/../net/include/EventSocket.h
  LoginServer/../net/include/EventTcpLink.h
  LoginServer/../net/include/EventTcpServer.h
@@ -19,6 +20,7 @@ LoginServer/CMakeFiles/loginserver.dir/src/LoginServerMgr.cpp.o
  LoginServer/../libutils/singleton.h
  LoginServer/../net/include/EventMain.h
  LoginServer/../net/include/EventNet.h
+ LoginServer/../net/include/EventPacket.h
  LoginServer/../net/include/EventSocket.h
  LoginServer/../net/include/EventTcpLink.h
  LoginServer/../net/include/EventTcpServer.h
@@ -34,6 +36,7 @@ LoginServer/CMakeFiles/loginserver.dir/src/main.cpp.o
  LoginServer/../libutils/tinyxml2.h
  LoginServer/../net/include/EventMain.h
  LoginServer/../net/include/EventNet.h
+ LoginServer/../net/include/EventPacket.h
  LoginServer/../net/include/EventSocket.h
  LoginServer/../net/include/EventTcpLink.h
  LoginServer/../net/include/EventTcpServer.h

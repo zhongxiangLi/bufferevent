@@ -2,6 +2,7 @@
 #define EVENTSOCKET_H_
 
 #include "EventNet.h"
+#include "EventPacket.h"
 
 class EventSocket{
 	
@@ -29,6 +30,9 @@ class EventSocket{
 
 		bool 			IsExternal(){return m_isExternal;}
 		void			SetExternal(bool val){m_isExternal = val;}
+
+		int 	SendNetMsg(EventNetPacket* pMsg);
+		void	Send(const char* buf,const int szie);
 	protected:
 
 		static void onTickCB(evutil_socket_t ,short ,void *);
