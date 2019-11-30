@@ -1,6 +1,6 @@
-#include "EventTcpServer.h"
+﻿#include "EventTcpServer.h"
 #include "EventTcpLink.h"
-
+#include "EventNet.h"
 EventTcpServer::EventTcpServer()
 {
 	m_pListener = NULL;
@@ -18,32 +18,31 @@ EventTcpServer::~EventTcpServer()
 
 bool EventTcpServer::Listen(unsigned int port)
 {
+#ifdef WIN32
+	WSADATA wsaData;
+    int nRet;
+    if((nRet = WSAStartup(MAKEWORD(2,2),&wsaData)) != 0){
+        printf("WSAStartup failed\n");
+        exit(0);
+    } 
+#endif
 	if(0 == port)
 		return false;
-	struct sockaddr_in addr;
 
-	memset(&addr,0,sizeof(addr));
-	addr.sin_family = AF_INET;
-	addr.sin_addr.s_addr = htonl(INADDR_ANY);
-	addr.sin_port = htons(port);
-	/*
-		struct event_base * g_pEvMainBase,evconnlistener_cb cb  
-		,void *ptr,unsigned flags,int backlog,const struct *sa,int socklen
-		return: struct evconnlistener*
-	----------------------------------
-		cb typedef void(*evconnlistener_cb)(struct evconnlistener *listener,evutil_socket_t socket,struct sockaddr*addr,int len,void *ptr)
-	*/
-	m_pListener = evconnlistener_new_bind(g_pEvMainBase,&sOnAccept,this,LEV_OPT_CLOSE_ON_FREE| LEV_OPT_REUSEABLE | LEV_OPT_THREADSAFE,-1,(struct sockaddr *)&addr,sizeof(addr));
-	
-	if(NULL == m_pListener)
-		return false;
+	 struct sockaddr_in sin;
+    memset(&sin, 0, sizeof(sin));
+    sin.sin_family = AF_INET;
+    sin.sin_addr.s_addr = htonl(INADDR_ANY);
+    sin.sin_port = htons(port);
 
-	m_nSocket = evconnlistener_get_fd(m_pListener);
-	/*
-		typedef void (*evconnlistener_errorcb)(struct evconnlistener *lis,void *ptr);
-	*/
-	gDebugMsg("listen on "<<port);
-	evconnlistener_set_error_cb(m_pListener,&sOnAcceptError);
+    m_pListener = evconnlistener_new_bind(g_pEvMainBase, &sOnAccept, this, LEV_OPT_CLOSE_ON_FREE | LEV_OPT_REUSEABLE | LEV_OPT_THREADSAFE,
+        -1, (struct sockaddr*)&sin, sizeof(sin));
+    if (m_pListener == NULL)
+    {
+		gErrorMsg("m_pListener is NULL");
+        return false;
+    }
+
 	return true;
 
 }
@@ -55,7 +54,7 @@ void EventTcpServer::sOnAccept(struct evconnlistener *pListener, evutil_socket_t
 	//调用虚函数，派生类会实现次函数
 	pServer->OnAccept(fd,address,socklen);
 }
-EventSocket * EventTcpServer::OnAccept(evutil_socket_t fd,struct sockaddr* address,int socklen)
+void EventTcpServer::OnAccept(evutil_socket_t fd,struct sockaddr* address,int socklen)
 {
 
 	char szIp[64]={0};
@@ -65,19 +64,30 @@ EventSocket * EventTcpServer::OnAccept(evutil_socket_t fd,struct sockaddr* addre
 
 	EventTcpLink *newLink = new EventTcpLink();
 	if(NULL == newLink)
-		return NULL;
+		return ;
 	
 	if(!newLink->Create(fd))
 	{
-		return NULL;
+		return ;
 	}	
 	newLink->SetIP(szIp);
 	newLink->SetPort(nPort);
-
-	return newLink;
+	newLink->SetTcpServer(this);
+	return ;
 
 }
 void EventTcpServer::sOnAcceptError(struct evconnlistener *lis,void *ptr)
 {
+
+}
+
+void EventTcpServer::OnLinkClose(EventTcpLink* pLink)
+{
+	gErrorMsg("OnLinkClose ");
+	if(pLink)
+	{
+		m_link.erase(pLink);
+		delete pLink;
+	}
 
 }

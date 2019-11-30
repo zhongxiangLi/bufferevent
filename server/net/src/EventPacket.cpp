@@ -42,7 +42,7 @@ bool EventPacket::InitFromMsgType(short nPackID)
 		return false;
 	if(nBodySize >= PACKET_BODY_MAX)
 	{	
-		gErrorMsg("InitFromMsgType packID "<<nPackID<<" bodySize "<<nBodySize);
+		//rrorMsg("InitFromMsgType packID "<<nPackID<<" bodySize "<<nBodySize);
 		return false;
 	}
 	if(m_nPacketBuff)
