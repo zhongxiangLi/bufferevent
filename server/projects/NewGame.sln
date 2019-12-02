@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewGame", "NewGame\NewGame.vcxproj", "{02C2AE4A-34FA-436A-9F21-6E090DAE2C23}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "comon", "comon\comon.vcxproj", "{28097F76-9BFB-4B40-A971-F331B7ED0F0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02C2AE4A-34FA-436A-9F21-6E090DAE2C23}.Debug|Win32.ActiveCfg = Debug|Win32
+		{02C2AE4A-34FA-436A-9F21-6E090DAE2C23}.Debug|Win32.Build.0 = Debug|Win32
+		{02C2AE4A-34FA-436A-9F21-6E090DAE2C23}.Release|Win32.ActiveCfg = Release|Win32
+		{02C2AE4A-34FA-436A-9F21-6E090DAE2C23}.Release|Win32.Build.0 = Release|Win32
+		{28097F76-9BFB-4B40-A971-F331B7ED0F0F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{28097F76-9BFB-4B40-A971-F331B7ED0F0F}.Debug|Win32.Build.0 = Debug|Win32
+		{28097F76-9BFB-4B40-A971-F331B7ED0F0F}.Release|Win32.ActiveCfg = Release|Win32
+		{28097F76-9BFB-4B40-A971-F331B7ED0F0F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
