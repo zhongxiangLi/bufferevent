@@ -9,16 +9,20 @@
 #include "EventTcpServer.h"
 #include "EventMain.h"
 
-
+class EventTcpLink;
 class LoginNetServer:public EventTcpServer
 {
+
 public:
 	LoginNetServer();
 	~LoginNetServer();
+	//virtual bool OnInit();
 	bool _OnInit();
 	void _OnExit();
 	//
-	virtual EventSocket *OnAccept(evutil_socket_t fd,struct sockaddr* adddress,int socket);
+	virtual void OnAccept(evutil_socket_t fd,struct sockaddr* adddress,int socket);
+
+	virtual void   OnLinkClose(EventTcpLink*);
 private:
 
 
