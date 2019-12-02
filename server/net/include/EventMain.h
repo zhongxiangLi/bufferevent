@@ -5,48 +5,27 @@
 #include <string>
 using namespace std;
 
-//typedef bool(*OnInitFunc)(void *arg,std::string&retName);
-//typedef void(*OnExitFunc)(void *arg);
-
-typedef bool (* OnInitFunc)();
-typedef void (* OnExitFunc)();
- 
 class EventMain
  {
 	 public:
 		EventMain();
 		virtual ~EventMain();
 		virtual void Run(int argc,char *argv[],int nFPS =1);
-		
-		
-		void sInitSignal();
+		virtual bool OnInit() = 0;
+		virtual bool Init();
+
+
+		void	sInitSignal();
+		void	Stop();
+		void	Crash(int);
+		bool	IsRunning(){return m_bRunning;}
+
 		static	void sSignalProcess(int nSig);
-		void Stop();
-		void Crash(int);
-				
-		bool OnInit();
-		void re(void(*)());
-		//void RegisterModule(OnInitFunc fpOninit,OnExitFunc fpOnExit);
-		void            RegisterMoudle(OnInitFunc fpOninit, OnExitFunc fpOnExit);
-		virtual void OnRegister() = 0;
+		static void sOnAccept(struct evconnlistener *,evutil_socket_t fd,struct sockaddr* addr,int len,void *);
 		
-		bool IsRunning(){return m_bRunning;}
 	 private:
 	 
-		bool m_bRunning;
-		
-	    typedef list <OnInitFunc> INIT_FUNC_LIST;		
-	    typedef list <OnExitFunc> EXIT_FUNC_LIST;		
-
-    	INIT_FUNC_LIST  m_listInitFunc;			//初始化函数回调
-	    EXIT_FUNC_LIST  m_listExitFunc;			//退出函
-	//	typedef	list<OnInitFunc> INIT_FUNC_LIST ;
-	//	typedef list<OnExitFunc> EXIT_FUNC_LIST ;
-	
-	//	INIT_FUNC_LIST m_listInitFunc;
-	//	EXIT_FUNC_LIST m_listExitFunc;
-
-		
+		bool m_bRunning;	
 
  };
 extern struct event_base *g_pEvMainBase;

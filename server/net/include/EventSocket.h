@@ -23,22 +23,24 @@ class EventSocket{
 		static void sOnWrite(struct bufferevent* pBev,void *pData);
 		static void sOnEvent(struct bufferevent* pBev,short events,void *pData);
 		
-		int             GetPort() const      { return m_Port; }
-		void            SetPort(int val)     { m_Port = val; }
-		std::string     GetIP() const        { return m_strIP; }
-		void            SetIP(std::string val) { m_strIP = val; }	
+		int         GetPort() const      { return m_Port; }
+		void        SetPort(int val)     { m_Port = val; }
+		std::string GetIP() const        { return m_strIP; }
+		void        SetIP(std::string val) { m_strIP = val; }	
 
-		bool 			IsExternal(){return m_isExternal;}
-		void			SetExternal(bool val){m_isExternal = val;}
+		bool 		IsExternal(){return m_isExternal;}
+		void		SetExternal(bool val){m_isExternal = val;}
 
-		int 	SendNetMsg(EventNetPacket* pMsg);
-		void	Send(const char* buf,const int szie);
+		int 		SendNetMsg(EventNetPacket* pMsg);
+		void		Send(const char* buf,const int szie);
+
+		virtual	void OnClose();
 	protected:
 
 		static void onTickCB(evutil_socket_t ,short ,void *);
 		fpOnCloseCB m_fnOnClose;
 		
-		evutil_socket_t		m_nSocket;
+		evutil_socket_t		m_sockfd;
 		struct bufferevent*	m_pBuffev;
 	
 		int 			m_Port;
