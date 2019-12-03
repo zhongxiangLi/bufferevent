@@ -807,7 +807,7 @@ inline Log4zStream & Log4zStream::writeDouble(double t, bool isSimple)
                 using std::isnan;
                 using std::isinf;
 #endif
-    if (isnan(t))
+    /*if (isnan(t))
     {
         writeString("nan", 3);
         return *this;
@@ -816,7 +816,7 @@ inline Log4zStream & Log4zStream::writeDouble(double t, bool isSimple)
     {
         writeString("inf", 3);
         return *this;
-    }
+    }*/
 
 
 

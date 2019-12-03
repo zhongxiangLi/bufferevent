@@ -5,9 +5,10 @@
 
 EventSocket::EventSocket()
 {
-	m_nSocket = 0;
+	m_sockfd = 0;
 	m_pBuffev = NULL ;
 	m_isExternal = false;
+	m_pTick = false;
 }
 EventSocket::~EventSocket()
 {
@@ -40,16 +41,16 @@ bool EventSocket::InitTick(int sec,int ms)
 }
 bool EventSocket::Create(evutil_socket_t nfd)
 {
-	if(NULL != m_pBuffev || m_nSocket > 0)
+	if(NULL != m_pBuffev || m_sockfd > 0)
 	{
 		return true;
 	}
 	if(nfd == 0)
-		m_nSocket = -1;
+		m_sockfd = -1;
 	else
-		m_nSocket = nfd;
-	gDebugMsg("socket fd is "<< m_nSocket);	
-	m_pBuffev = bufferevent_socket_new(g_pEvMainBase,m_nSocket,BEV_OPT_CLOSE_ON_FREE);
+		m_sockfd = nfd;
+
+	m_pBuffev = bufferevent_socket_new(g_pEvMainBase,m_sockfd,BEV_OPT_CLOSE_ON_FREE);
 	if(m_pBuffev == NULL)
 	{
 		int err = EVUTIL_SOCKET_ERROR();
@@ -58,7 +59,7 @@ bool EventSocket::Create(evutil_socket_t nfd)
 	}
 	gDebugMsg("bufferevent_socket_new success");
 	if(nfd == 0)
-		m_nSocket = bufferevent_getfd(m_pBuffev);
+		m_sockfd = bufferevent_getfd(m_pBuffev);
 	
 	bufferevent_setcb(m_pBuffev,&EventSocket::sOnRead,&EventSocket::sOnWrite,&EventSocket::sOnEvent,(void*)this);
 	bufferevent_enable(m_pBuffev,EV_READ|EV_WRITE);
@@ -70,8 +71,8 @@ bool EventSocket::Create(evutil_socket_t nfd)
 	
 	//设置缓冲区大小
 	int buf = 1024*1024;
-	setsockopt(m_nSocket,SOL_SOCKET,SO_RCVBUF,(const char *)&buf,sizeof(int));
-	setsockopt(m_nSocket,SOL_SOCKET,SO_SNDBUF,(const char*)&buf,sizeof(int));
+	setsockopt(m_sockfd,SOL_SOCKET,SO_RCVBUF,(const char *)&buf,sizeof(int));
+	setsockopt(m_sockfd,SOL_SOCKET,SO_SNDBUF,(const char*)&buf,sizeof(int));
 	return true;
 	
 }
@@ -82,7 +83,7 @@ void EventSocket::sOnRead(struct bufferevent* pBev,void *pData)	// 静态函数
 		正常需要在这进行消息的解析操作
 	*/
 	EventSocket *pSocket = (EventSocket*)pData;
-//	bufferevent_read_buffer(m_peve);
+
 
 	gErrorMsg("read new msg");
 	// 从缓冲区读取到evbuffer中
@@ -101,6 +102,7 @@ void EventSocket::sOnRead(struct bufferevent* pBev,void *pData)	// 静态函数
 		else
 			evbuffer_drain(buf,1);//包头标识匹配不上  删除一个字节
 	}while(1);
+
 	//解析包头数据
 	size_t headLen  = 0;
 	EventNetPacket	m_head;
@@ -128,6 +130,8 @@ void EventSocket::sOnRead(struct bufferevent* pBev,void *pData)	// 静态函数
 
 	evbuffer_remove(m_body,(void*)(pPacket->m_szData),m_head.m_i2DataSize);
 
+	gDebugMsg("recv head msg packetid is "<<m_head.m_i2PacketID);
+
 	//  分发数据到具体协议
 
 
@@ -140,7 +144,18 @@ void EventSocket::sOnWrite(struct bufferevent* pBev,void *pData)
 }
 void EventSocket::sOnEvent(struct bufferevent* pBev,short events,void *pData)
 {
-	gErrorMsg(" Event have ");
+	EventSocket *pSocket = (EventSocket*)pData;
+
+	if(events & BEV_EVENT_CONNECTED)
+	{
+		gErrorMsg(" Event have connect");
+		
+	}
+	if((events & BEV_EVENT_EOF) ||(events & BEV_EVENT_ERROR))
+	{
+		gErrorMsg(" Event have EOF ERROR");
+		pSocket->OnClose();
+	}
 }
 void EventSocket::onTickCB(evutil_socket_t fd ,short event,void *pData)
 {
@@ -170,4 +185,15 @@ int EventSocket::SendNetMsg(EventNetPacket* pMsg)
 
 
 	return 0;
+}
+void EventSocket::OnClose()
+{
+	//调用退出函数
+	gErrorMsg("EventSocket OnClsoe fd is "<<m_sockfd);
+	if(m_pBuffev != NULL)
+	{
+		bufferevent_free(m_pBuffev);
+		m_pBuffev = NULL;
+	}
+
 }

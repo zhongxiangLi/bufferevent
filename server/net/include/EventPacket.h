@@ -9,6 +9,11 @@
 #define PACKET_BODY_MAX (0x7FFFFFFF)
 #include <string.h>
 #include <stdlib.h>
+
+#ifdef _MSC_VER
+#pragma warning (disable: 4200)
+#endif
+#pragma pack(push,1)
 typedef struct _package_client_
 {
 	short m_i2Begin;

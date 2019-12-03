@@ -5,9 +5,7 @@
 #include <assert.h>
 #include <errno.h>
 #include <sys/types.h>
-#include <sys/socket.h>
-#include <sys/time.h>
-#include <arpa/inet.h>
+
 #include <string>
 
 #include "common.h"
@@ -20,12 +18,16 @@
 #include "LoginServerMgr.h"
 
 using namespace tinyxml2;
+#ifdef WIN32
+#include "winsock2.h"
+#endif
 
+      
 int main(int argc,char ** argv)
 {
-	
+
 	//init  log server
-	if(!g_LogSrv.init("config/log4z.cfg"))
+	if(!g_LogSrv.init("../../config/log4z.cfg"))
     {   
          printf("g_logsrc init fail!!!!\n");
 		return 0;
@@ -34,7 +36,7 @@ int main(int argc,char ** argv)
 	//load xml 
 
 	XMLDocument xmlDoc;
-	XMLError eResult = xmlDoc.LoadFile("config/public_config.xml");
+	XMLError eResult = xmlDoc.LoadFile("../../config/public_config.xml");
 
 	if(eResult != XML_SUCCESS)
 	{
@@ -50,8 +52,10 @@ int main(int argc,char ** argv)
 	// init socket server listen 
 	LoginServerMgr MainServer;
 	MainServer.Run(argc,argv,50);
-	
 
+	
 
 	return 0;
 }
+
+

@@ -11,7 +11,8 @@ public:
 	LoginServerMgr();
 	virtual ~LoginServerMgr();
 
-	virtual void OnRegister();	
+	virtual bool OnInit();	
+	virtual void OnExit();
 private:
 
 

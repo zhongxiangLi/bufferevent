@@ -5,10 +5,12 @@
 #include "EventMain.h"
 #include "EventTcpLink.h"
 using namespace std;
+class EventTcpLink;
 
 class EventTcpServer :public EventSocket
 {
 public:
+	typedef map<EventTcpLink*,EventTcpLink*> LINKMAP;
 public:
 	EventTcpServer();
 	virtual ~EventTcpServer();
@@ -18,9 +20,13 @@ public:
 	static void sOnAcceptError(struct evconnlistener *lis,void *ptr);
 
 	//派生类继承，
-	virtual EventSocket* OnAccept(evutil_socket_t fd,struct sockaddr*address,int len);
-private:
+	virtual void  OnAccept(evutil_socket_t fd,struct sockaddr*address,int len);
+
+	virtual void   OnLinkClose(EventTcpLink*);
+protected:
 	evconnlistener * m_pListener;
+
+	LINKMAP	   m_link;
 };
 
 #endif
