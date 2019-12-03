@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{d669a37d-08f9-4a33-8c22-9f8ef5c80016}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libutils">
+      <UniqueIdentifier>{8971ac02-bf27-4b53-b532-b40025395b41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\net\include\CS_NET_MSG_DEF.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\CS_NET_MSG_STRUCT.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\EventMain.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\EventNet.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\EventPacket.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\EventProcessor.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\EventSocket.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\EventTcpLink.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\EventTcpServer.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\net\include\NET_MSG_DEF.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libutils\common.h">
+      <Filter>libutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libutils\global.h">
+      <Filter>libutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libutils\log4z.h">
+      <Filter>libutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libutils\LogServer.h">
+      <Filter>libutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libutils\singleton.h">
+      <Filter>libutils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libutils\tinyxml2.h">
+      <Filter>libutils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\net\src\EventMain.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\src\EventPacket.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\src\EventProcessor.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\src\EventSocket.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\src\EventTcpLink.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\src\EventTcpServer.cpp">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libutils\global.cpp">
+      <Filter>libutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libutils\log4z.cpp">
+      <Filter>libutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libutils\LogServer.cpp">
+      <Filter>libutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libutils\tinyxml2.cpp">
+      <Filter>libutils</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
