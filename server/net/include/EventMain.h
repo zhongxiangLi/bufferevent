@@ -12,6 +12,7 @@ class EventMain
 		virtual ~EventMain();
 		virtual void Run(int argc,char *argv[],int nFPS =1);
 		virtual bool OnInit() = 0;
+		virtual void OnExit() = 0;
 		virtual bool Init();
 
 

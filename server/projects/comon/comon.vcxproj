@@ -90,6 +90,7 @@
     <ClInclude Include="..\..\libutils\LogServer.h" />
     <ClInclude Include="..\..\libutils\singleton.h" />
     <ClInclude Include="..\..\libutils\tinyxml2.h" />
+    <ClInclude Include="..\..\net\include\CommonThread.h" />
     <ClInclude Include="..\..\net\include\CS_NET_MSG_DEF.h" />
     <ClInclude Include="..\..\net\include\CS_NET_MSG_STRUCT.h" />
     <ClInclude Include="..\..\net\include\EventMain.h" />
@@ -106,6 +107,7 @@
     <ClCompile Include="..\..\libutils\log4z.cpp" />
     <ClCompile Include="..\..\libutils\LogServer.cpp" />
     <ClCompile Include="..\..\libutils\tinyxml2.cpp" />
+    <ClCompile Include="..\..\net\src\CommonThread.cpp" />
     <ClCompile Include="..\..\net\src\EventMain.cpp" />
     <ClCompile Include="..\..\net\src\EventPacket.cpp" />
     <ClCompile Include="..\..\net\src\EventProcessor.cpp" />

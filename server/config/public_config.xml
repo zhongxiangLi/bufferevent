@@ -7,4 +7,6 @@
 	<server_pwd>123456</server_pwd>
 	<server_ip>127.0.0.1</server_ip>
 	<server_port>6789</server_port>
+	<datasvr_ip>127.0.0.1</datasvr_ip>
+	<datasvr_port>6790</datasvr_port>
 </root>

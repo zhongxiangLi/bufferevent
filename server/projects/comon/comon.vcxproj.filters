@@ -72,6 +72,9 @@
     <ClInclude Include="..\..\libutils\tinyxml2.h">
       <Filter>libutils</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\net\include\CommonThread.h">
+      <Filter>net</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\net\src\EventMain.cpp">
@@ -103,6 +106,9 @@
     </ClCompile>
     <ClCompile Include="..\..\libutils\tinyxml2.cpp">
       <Filter>libutils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\net\src\CommonThread.cpp">
+      <Filter>net</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

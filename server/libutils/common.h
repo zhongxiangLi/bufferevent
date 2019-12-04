@@ -12,7 +12,7 @@
 
 
 
-typedef int handle_t;
+
 typedef unsigned int event_t;
  
 
