@@ -3,6 +3,7 @@
 #ifndef DBThread_H_
 #define DBThread_H_
 #include "CommonThread.h"
+
 #define maxsize 128
 struct DBInfo
 {
